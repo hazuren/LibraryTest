@@ -21,4 +21,8 @@ public class Library {
 
         return null;
     }
+
+    public int size() {
+        return books.size();
+    }
 }
