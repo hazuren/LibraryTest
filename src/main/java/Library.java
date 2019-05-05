@@ -22,6 +22,13 @@ public class Library {
         return null;
     }
 
+    public Book findByISBN(String isbn){    // ISBN으로 도서 검색
+        for(Book book : books){
+            if(book.getISBN().equals(isbn)) return book;
+        }
+        return null;
+    }
+
     public int size() {
         return books.size();
     }

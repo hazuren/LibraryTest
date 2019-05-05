@@ -7,6 +7,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Book {
     private String title;
+    private String ISBN;
     private int pages;
     private String author;
     private List<Integer> bookMarks;

@@ -26,6 +26,15 @@ public class LibraryTest {
     }
 
     @Test
+    public void verifyFindByISBN() {    // ISBN으로 찾기 test
+        Library library = mock(Library.class);
+
+        when(library.findByISBN("9791162202913")).thenReturn(new Book("모든 순간이 너였다", 279, "하태완"));
+        assertThat(library.findByISBN("9791162202913"), is(new Book("모든 순간이 너였다", 279, "하태완")));
+        verify(library).findByISBN(anyString());
+    }
+
+    @Test
     public void checkLibrarySizeTwice() {
         Library library = new Library(new LinkedList<>());
         Library librarySpy = spy(library);
